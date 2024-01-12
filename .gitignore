@@ -1,0 +1,20 @@
+# Dependency directories
+node_modules/
+
+# Environment variables file (if using dotenv or similar)
+.env
+
+# Editor and IDE specific files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Optional: OS-specific files
+.DS_Store
+Thumbs.db
