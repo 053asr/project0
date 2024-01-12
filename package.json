@@ -2,9 +2,11 @@
   "name": "expense-tracker",
   "version": "0.0.0",
   "private": true,
-  "scripts":{
-    "start":"node app.js"
-  },
+"scripts": {
+  "start": "node server.js",
+  "build": "npm run build:prod",
+  "build:prod": "webpack --config webpack.prod.js"
+},
   "dependencies": {
     "body-parser": "^1.20.2",
     "bootstrap": "^5.2.3",
