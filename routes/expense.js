@@ -53,7 +53,7 @@ router.patch("/UPDATE_EXPENSE/:userId/:id",authMiddleware, (req, res, next) => {
   );
 });
 
-router.get("/GET_ALL_EXPENSE/:id", authMiddleware,(req, res, next) => {
+router.get("/GET_ALL_EXPENSE/:id",(req, res, next) => {
   UserModel.findOne({_id:req.params.id}).then((documents) => {
     // console.log(documents);
     res.status(200).json({
@@ -62,6 +62,7 @@ router.get("/GET_ALL_EXPENSE/:id", authMiddleware,(req, res, next) => {
       status: true,
     });
   }).catch((err)=>{
+    console.log('yes');
     res.status(401).json({
       message: err,
       status: false,

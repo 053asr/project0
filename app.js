@@ -8,8 +8,10 @@ const userRoutes=require('./routes/user');
 const expenseRoutes=require('./routes/expense');
 
 const mongoose = require("mongoose");
-mongoose.connect('mongodb+srv://abhay2024ec1069:mAlhpcMEdv2eDvp6@expensetracker.yka8k0b.mongodb.net/?retryWrites=true&w=majority')
-.then(()=>{
+mongoose.connect('mongodb+srv://abhay2024ec1069:mAlhpcMEdv2eDvp6@expensetracker.yka8k0b.mongodb.net/expenseTracker', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(()=>{
   console.log("Connected to database");
 })
 .catch(()=>{
